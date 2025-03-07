@@ -1,0 +1,71 @@
+.wp-caption {
+    margin-bottom: 1.75em;
+    max-width: 100%
+}
+
+.wp-caption-text {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.24s ease-in-out;
+    -moz-transition: opacity 0.24s ease-in-out;
+    transition: opacity 0.24s ease-in-out
+}
+
+.sticky {
+    color: #000
+}
+
+.gallery-caption {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.24s ease-in-out;
+    -moz-transition: opacity 0.24s ease-in-out;
+    transition: opacity 0.24s ease-in-out
+}
+
+.bypostauthor {
+    color: #000
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px
+}
+
+.alignright {
+    display: block;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+    margin-bottom: 20px
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important
+}
+
+.screen-reader-text:focus {
+    color: #000
+}
+
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+    width: 100%
+}
+
+rs-module-wrap {
+    max-width: 100%;
+    left: 0px!important
+}
