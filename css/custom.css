@@ -1,7 +1,73 @@
+@font-face {
+    font-family: 'Hanifah-Salamah';
+    src: url('/assets/fonts/Hanifah-Salamah-BF662600f857bcf.otf') format('opentype'); /* Formato OpenType */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .weeding-navbar {
     background-color: white !important;
 }
 
-.nav-link-custom {
+.nav-link-custom, .custom-color {
     color: #EBA696 !important;
+}
+
+.custom-font {
+    font-family: 'Hanifah-Salamah', sans-serif !important;
+    vertical-align: middle !important;
+}
+
+.custom-size1 {
+    font-size: 3rem !important;
+}
+.custom-size3 {
+    font-size: 3rem !important;
+}
+.custom-size4 {
+    font-size: 4rem !important;
+}
+.custom-size5 {
+    font-size: 5rem !important;
+}
+
+
+.custom-size6 {
+    font-size: 6rem !important;
+}
+
+.custom-background{
+    background-color: #EBA696 !important;
+}
+
+.custom-margin05 {
+    margin-left: .5rem !important;
+}
+
+.custom-margin-bottom-1 {
+    margin-bottom: 1rem !important;
+}
+.custom-margin-right-1 {
+    margin-right: 1rem !important;
+}
+.custom-margin-top-5 {
+    margin-top: 5rem !important;
+}
+
+.elementor-background-overlay {
+    background-image: url("../assets/imgs/reviews-fondo.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-icon i{
+    background-color: #EBA696 !important;
+}
+
+ .img:before {
+    background-color: #EBA696 !important;
+}
+
+.custom-footer {
+    background-color: white !important;
 }

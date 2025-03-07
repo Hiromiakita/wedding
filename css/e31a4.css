@@ -3969,7 +3969,7 @@ button.mfp-close,button.mfp-arrow {
     position: relative;
     background-blend-mode: overlay;
     background: rgba(0,0,0,.7);
-    background-image: url("/demo/wp/florya/wp-content/themes/florya/includes/img/slider/17.jpg");
+    background-image: url("../assets/imgs/reviews-fondo.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
