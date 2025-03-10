@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hanifah-Salamah';
-    src: url('/assets/fonts/Hanifah-Salamah-BF662600f857bcf.otf') format('opentype'); /* Formato OpenType */
+    src: url("../assets/fonts/Hanifah-Salamah-BF662600f857bcf.otf") format('opentype'); /* Formato OpenType */
     font-weight: normal;
     font-style: normal;
 }
