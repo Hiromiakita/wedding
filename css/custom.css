@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hanifah-Salamah';
-    src: url('/assets/fonts/HanifahSalamah.woff') format('woff'), url('/assets/fonts/HanifahSalamah.woff2') format('woff2');
+    src: url('https://hiromiakita.github.io/wedding/assets/fonts/HanifahSalamah.woff') format('woff'), url('https://hiromiakita.github.io/wedding/assets/fonts/HanifahSalamah.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
