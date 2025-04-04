@@ -117,4 +117,18 @@ background: none !important;
 
   .custom-widget {
     padding: 20rem;
+
+
+}
+
+.review-item{
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.white-color-review {
+    color: white !important;
 }
