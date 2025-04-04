@@ -114,3 +114,7 @@ background: none !important;
     color: white !important;
     font-weight: 800;
   }
+
+  .custom-widget {
+    padding: 20rem;
+}
