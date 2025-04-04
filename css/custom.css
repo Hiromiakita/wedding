@@ -116,8 +116,7 @@ background: none !important;
   }
 
   .custom-widget {
-    padding: 20rem;
-
+    padding: 20rem !important;
 
 }
 
