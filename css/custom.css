@@ -143,3 +143,12 @@ background: none !important;
     text-align: center;
     margin: 2rem;
 }
+
+.nav-button span {
+    background-color: #EBA696  !important;
+}
+
+.button-translation-container {
+    display: flex;
+    justify-content: end;
+}

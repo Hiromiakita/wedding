@@ -486,10 +486,17 @@
 			margin-left: 15px;
 			font-size: 14px;
 			transition: all 0.3s ease;
+			font-size: 1rem;
+			border: 1px solid#EBA696 !important;
+
 		}
 
 		.language-toggle:hover {
 			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.language-toggle:focus {
+			outline: #EBA696 !important;
 		}
 
 		.navbar-nav {
@@ -606,68 +613,53 @@
 	</nav>
 	<div class="florya-mob-menu-wrapper florya-mob-menu-ss ptr-classic-mob-off weeding-navbar">
 		<div class="logo-holder">
-			<a class="logo" href="/">
+
+			<a class="logo" href="./assets/imgs/theweddingplanner.mx-logo.png">
 				<img src="./assets/imgs/theweddingplanner.mx-logo.png" class="logo-img" alt="Florya">
 			</a>
 		</div>
-		<div class="nav-button" href="/">
-			<div class="nav-button"><span></span><span></span><span></span></div>
+		<div class="button-translation-container">
+			<button id="language-toggle" class="language-toggle nav-link nav-color nav-link-custom menu-contact"
+				onclick="toggleLanguage()">ES</button>
 		</div>
-		<div class="nav-holder main-menu main-menu-click-classic">
+
+
+		<!-- <div class="nav-button-wrap">
+			<div class="nav-button">
+				<span></span><span></span><span></span>
+			</div>
+		</div> -->
+		<!-- <div class="nav-holder main-menu main-menu-click-classic weeding-navbar">
 			<nav class="florya-menu-helper-class">
 				<ul>
 					<li
-						class="nav-item dropdown  menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children">
+						class="nav-item dropdown menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children">
 						<a class="nav-link nav-color">Home</a>
-						<ul class="sub-menu-bn">
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item">
-								<a href="/" class="nav-link nav-color">Home Layout 1</a>
-							</li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-									href="/home-layout-2/" class="nav-link nav-color">Home Layout 2</a></li>
-						</ul>
 					</li>
-					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a href="/about/"
-							class="nav-link nav-color">About</a></li>
-					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a href="/services/"
-							class="nav-link nav-color">Services</a>
+					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page">
+						<a href="https://webredox.net/demo/wp/florya/about/" class="nav-link nav-color">About</a>
+					</li>
+					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page">
+						<a href="https://webredox.net/demo/wp/florya/services/" class="nav-link nav-color">Services</a>
 					</li>
 					<li
-						class="nav-item dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+						class="nav-item dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
 						<a class="nav-link nav-color">Portfolio</a>
-						<ul class="sub-menu-bn">
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-									href="/portfolio-grid/" class="nav-link nav-color">Portfolio Grid</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-									href="/portfolio-masonry/" class="nav-link nav-color">Portfolio Masonry</a></li>
-						</ul>
+
 					</li>
-					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a href="/gallery/"
-							class="nav-link nav-color">Gallery</a>
-					</li>
-					<li class="nav-item dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"
-						href="/gallery/">
-						<a class="nav-link nav-color">Blog</a>
+					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page">
+						<a href="https://webredox.net/demo/wp/florya/gallery/" class="nav-link nav-color">Gallery</a>
 					</li>
 					<li
-						class="nav-item dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+						class="nav-item dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
 						<a class="nav-link nav-color">Pages</a>
-						<ul class="sub-menu-bn">
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/coming-soon/"
-									class="nav-link nav-color">Coming Soon</a></li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/404"
-									class="nav-link nav-color">404 Error</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-									href="/services-details/" class="nav-link nav-color">Services Details</a></li>
-						</ul>
 					</li>
-					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact/"
-							class="nav-link nav-color">Contact</a>
+					<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page">
+						<a href="https://webredox.net/demo/wp/florya/contact/" class="nav-link nav-color">Contact</a>
 					</li>
 				</ul>
 			</nav>
-		</div>
+		</div> -->
 	</div>
 
 	<section class="default-page-full" data-scroll-index="1">
