@@ -152,3 +152,7 @@ background: none !important;
     display: flex;
     justify-content: end;
 }
+
+.custom-line-height {
+  line-height:0 !important
+}
