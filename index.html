@@ -20,6 +20,199 @@
 	<script>/*<![CDATA[*/window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/webredox.net\/demo\/wp\/florya\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2" } };
 		/*! This file is auto-generated */
 		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);/*]]>*/</script>
+
+	<script>
+		// Función para cambiar el idioma
+		function changeLanguage(lang) {
+			document.documentElement.lang = lang;
+			localStorage.setItem('preferredLanguage', lang);
+
+			// Cambiar el texto del botón
+			const langBtn = document.getElementById('language-toggle');
+			if (lang === 'es') {
+				langBtn.textContent = 'EN';
+			} else {
+				langBtn.textContent = 'ES';
+			}
+
+			// Aquí puedes añadir más lógica para cambiar textos dinámicamente
+			updateTexts(lang);
+		}
+
+		// Función para actualizar textos (se implementará con los textos traducidos)
+		function updateTexts(lang) {
+			const translations = {
+				'home': { 'en': 'Home', 'es': 'Inicio' },
+				'about': { 'en': 'About', 'es': 'Nosotros' },
+				'services': { 'en': 'Services', 'es': 'Servicios' },
+				'portfolio': { 'en': 'Portfolio', 'es': 'Portafolio' },
+				'gallery': { 'en': 'Gallery', 'es': 'Galería' },
+				'blog': { 'en': 'Blog', 'es': 'Blog' },
+				'pages': { 'en': 'Pages', 'es': 'Páginas' },
+				'contact': { 'en': 'Contact', 'es': 'Contacto' },
+				'dream_maker': { 'en': 'Dream Maker', 'es': 'Creadora de Sueños' },
+				'mexico_locations': { 'en': 'Mexico: Puerto Vallarta, Punta Mita & Sayulita.', 'es': 'México: Puerto Vallarta, Punta Mita y Sayulita.' },
+				'happiness_quote': { 'en': '"Happiness grows bigger when it is shared."', 'es': '"La felicidad se hace más grande cuando se comparte"' },
+				'we_do': { 'en': 'We do everything', 'es': 'Hacemos' },
+				'elegant': { 'en': 'From an elegant', 'es': 'Desde una elegante' },
+				'wedding': { 'en': 'wedding', 'es': 'boda' },
+				'ceremonia': { 'en': 'to an intimate ceremony!', 'es': 'hasta una íntima ceremonia!' },
+				'PV': { 'en': 'Located on the Pacific Ocean, Puerto Vallarta is renowned for its breathtaking sunsets. This charming little town, with its red-tiled roofs and cobblestone streets, offers a perfect setting and a wonderful atmosphere for any romantic experience.', 'es': 'Ubicado en el océano Pacífico, reconocido por sus impresionantes puestas de sol. Este pueblito encantador, con sus techos de teja roja y calles empedradas, ofrece un escenario perfecto y una atmósfera maravillosa para cualquier romántica experiencia.' },
+				'RN': { 'en': 'Located south of Puerto Vallarta International Airport, San Pancho, Sayulita, Punta Mita, and La Cruz de Huanacaxtle are some of the picturesque towns of Riviera Nayarit. These destinations boast exotic, romantic, and sophisticated locations with pristine waters, golden sands, and blue skies, providing the perfect touch for your celebration.', 'es': 'Ubicados al sur del aeropuerto internacional de Puerto Vallarta, San Pancho, Sayulita, Punta Mita y la Cruz de Huanacaxtle, son algunos de los pueblitos de la Riviera Nayarit que albergan exóticas, románticas y sofisticadas locaciones con playas de aguas prístinas, arenas doradas y cielos azules que nos dan el toque perfecto para tu celebración.' },
+				'explore': { 'en': 'Explore', 'es': 'Explora' },
+				'our': { 'en': 'Our', 'es': 'Otros' },
+				'services': { 'en': 'Services', 'es': 'Servicios' },
+				'hiring': { 'en': 'Hiring a wedding planner may seem like a big investment, but it saves you stress and helps you avoid poor decisions. While choosing the dress or tasting cakes may be exciting at first, the essential details can quickly become overwhelming.', 'es': 'Contratar un organizador de bodas puede parecer una gran inversión, pero te ahorra estrés y evita malas decisiones. Aunque al principio te emocione elegir el vestido o degustar pasteles, los detalles esenciales pueden ser abrumadores.' },
+				'personalized': { 'en': 'Personalized', 'es': 'Consultoría' },
+				'consultation': { 'en': 'Consultation', 'es': 'Personalizada' },
+				'mystory': { 'en': 'MY STORY', 'es': 'MI HISTORIA' },
+				'story1': { 'en': 'I am Gretel Aguilera, a passionate wedding planner with years of experience creating unforgettable weddings in Puerto Vallarta, Punta Mita, and Sayulita.', 'es': 'Soy Gretel Aguilera, wedding planner certificada por la ABC y miembro de la Asociación de Coordinadores de Bodas de Puerto Vallarta y Riviera Nayarit (AIR), cuento con 24 años de experiencia creando bodas inolvidables en Puerto Vallarta, Punta Mita, Sayulita y los alrededores de la Bahía de Banderas.' },
+				'story2': { 'en': '. My love for organization and design is paired with a sincere commitment to bringing each couple’s vision to life. Through a personalized approach, I ensure that every detail reflects their love story.', 'es': 'Mi pasión por la organización y el diseño de bodas se combina con un compromiso genuino de hacer realidad la visión de cada pareja que me confía su tan importante proyecto. A través de un enfoque personalizado, cuido cada detalle para que refleje su personalizad y su estilo.' },
+				'story3': { 'en': 'I’m here to guide you every step of the way and make your special day truly magical. Let’s make your dreams come true!', 'es': 'Estoy aquí para acompañarte en cada paso del proceso y convertir tu día especial en una experiencia verdaderamente mágica. ¡Hagamos realidad tus sueños!' },
+				'Certified': { 'en': 'Certified coordinator by Beverly Clark and ABC Latin America.', 'es': 'Coordinadora certificada por Beverly Clark y ABC Latam' },
+				'member': { 'en': 'Member of AIR, the Association of Wedding Coordinators of PVR and NYR', 'es': 'Miembro de AIR, Asociación de Coordinadores de bodas de PVR y NYR' },
+				'experience': { 'en': 'Over 23 years of professional experience', 'es': 'Más de 23 años de experiencia' },
+				'weddings_made': { 'en': 'More than 350 weddings successfully coordinated', 'es': 'Más de 350 bodas realizadas' },
+				'weddings': { 'en': 'Weddings', 'es': 'bodas' },
+				'our_': { 'en': 'Our', 'es': 'Nuestro' },
+				'Portfolio': { 'en': 'Portfolio', 'es': 'Portafolio' },
+				'meet': { 'en': 'meet', 'es': 'conoce a' },
+				'team': { 'en': 'Team', 'es': 'Equipo' },
+				'minister': {
+					'en': 'Spiritual Ceremony Minister',
+					'es': 'Ministro de Ceremonias Espirituales'
+				},
+				'coordinator_wedding': {
+					'en': 'Wedding Coordinator',
+					'es': 'Coordinador de bodas'
+				},
+				'esp_eng': {
+					'en': 'Spanish and English',
+					'es': 'Español e ingles'
+				},
+				'flowers': {
+					'en': 'Expert in flowers, design, and event decoration',
+					'es': 'Experta en flores, diseño y decoración de eventos'
+				},
+				'coord_wed': {
+					'en': 'Wedding Coordinator',
+					'es': 'Coordinadora de bodas'
+				},
+				'admin': {
+					'en': 'Administration',
+					'es': 'Administración'
+				},
+				'event_co': {
+					'en': 'Event Coordination',
+					'es': 'Coordinación de eventos'
+				},
+				'expe_sup': {
+					'en': 'Experience in Supervision and Logistics',
+					'es': 'Experiencia Supervisión y Logística'
+				},
+				'inspire': {
+					'en': 'GET INSPIRED WITH OUR',
+					'es': 'INSPÍRATE CON NUESTRO'
+				},
+				'last': {
+					'en': 'Latest',
+					'es': 'Último'
+				},
+				'video': {
+					'en': 'Video',
+					'es': 'Video'
+				},
+				'lets': {
+					'en': "LET'S START PLANNING THE WEDDING OF YOUR DREAMS",
+					'es': "EMPECÉMOS A PLANEAR LA BODA DE TUS SUEÑOS"
+				},
+				'location_for': {
+					'en': '❖ Location for the ceremony and event with ocean view',
+					'es': '❖ Locación para la ceremonia y evento con vista al mar'
+				},
+				'welcome_sign': {
+					'en': '❖ Personalized Welcome Sign',
+					'es': '❖ Letrero de Bienvenida personalizado'
+				},
+				'minister_for': {
+					'en': '❖ Minister for spiritual ceremony',
+					'es': '❖ Ministro para ceremonia espiritual'
+				},
+				'chairs_and': {
+					'en': '❖ Chairs and audio for ceremony',
+					'es': '❖ Sillas y audio para ceremonia'
+				},
+				'reception_dinner': {
+					'en': '❖ Reception Dinner with 1 hour of Welcome Cocktail',
+					'es': '❖ Cena-Recepción con 1 hora de Coctel de Bienvenida'
+				},
+				'three_course': {
+					'en': '❖ Three-course menu with starter, main dish, and dessert',
+					'es': '❖ Menú de 3 tiempos, con entrada, plato fuerte y postre'
+				},
+				'six_hours': {
+					'en': '❖ 6 hours of open bar with ice and mixers included',
+					'es': '❖ 6 horas de descorche con hielos y mezcladores incluidos'
+				},
+				'tables_chairs': {
+					'en': '❖ Tables, chairs, and linens for the event to choose from',
+					'es': '❖ Mesas, sillas y mantelería para el evento a seleccionar'
+				},
+				'seven_hours': {
+					'en': '❖ 7 hours of DJ music',
+					'es': '❖ 7 horas de música de DJ'
+				},
+				'dance_floor': {
+					'en': '❖ Wooden dance floor and robotic lighting',
+					'es': '❖ Pista de baile de madera e iluminación robótica'
+				},
+				'day_of': {
+					'en': '❖ Day-of Wedding Coordination (Event coordination)',
+					'es': '❖ Day-of Wedding Coordination (Coordinación del evento)'
+				},
+				'waiters_cooks': {
+					'en': '❖ Waiters, cooks, and event staff included',
+					'es': '❖ Meseros, cocineros, y personal a cargo del evento incluido.'
+				},
+				'hello': { 'en': "Hi! I'm Gretel, a Wedding Planner who loves her job and is passionate about creating dream weddings. Contact us to work together!", 'es': 'Hola! Soy Gretel Una Wedding Planner que ama su trabajo y le encanta hacer bodas de ensueño. Contáctanos para trabajar juntos!' },
+
+				'contact_us': { 'en': 'Contact us', 'es': 'Contáctanos' },
+				'placeholder_name': { 'en': 'Couple\'s name', 'es': 'Nombre de los novios' },
+				'placeholder_guests': { 'en': 'Number of guests', 'es': 'Número de invitados' },
+				'placeholder_email': { 'en': 'Email', 'es': 'Correo electrónico' },
+				'placeholder_date': { 'en': 'Wedding date', 'es': 'Fecha de la boda' },
+				'placeholder_phone': { 'en': 'Phone number', 'es': 'Teléfono de contacto' },
+				'placeholder_message': { 'en': 'Message', 'es': 'Mensaje' },
+				'submit_button': {'en': 'Send', 'es': 'Enviar'},
+
+
+
+
+				// Añade más traducciones según sea necesario
+			};
+
+			// Actualizar textos basados en las clases de traducción
+			document.querySelectorAll('[data-translate]').forEach(element => {
+				const key = element.getAttribute('data-translate');
+				if (translations[key] && translations[key][lang]) {
+					element.textContent = translations[key][lang];
+				}
+			});
+			// Traduce placeholders
+			document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[key] && translations[key][lang]) {
+            element.setAttribute('placeholder', translations[key][lang]);
+        }
+    });
+		}
+
+		// Cargar el idioma preferido al cargar la página
+		document.addEventListener('DOMContentLoaded', function () {
+			const preferredLanguage = localStorage.getItem('preferredLanguage') || 'es';
+			changeLanguage(preferredLanguage);
+		});
+	</script>
 	<style id="wp-emoji-styles-inline-css">
 		img.wp-smiley,
 		img.emoji {
@@ -473,6 +666,62 @@
 			}
 		}
 	</style>
+	<style>
+		.language-toggle {
+			background: transparent;
+			border: 1px solid #fff;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			margin-left: 15px;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+
+		.language-toggle:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.navbar-nav {
+			display: flex;
+			align-items: center;
+		}
+
+		/* Ajustes para el menú móvil */
+		.florya-mob-menu-wrapper .language-toggle {
+			margin: 10px 0;
+			display: inline-block;
+		}
+	</style>
+	<style>
+		.image-row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+			padding: 2rem 0;
+			background-color: #FAECE8;
+		}
+
+		.image-row img {
+			width: 150px;
+			height: auto;
+			max-width: 100%;
+		}
+
+		@media (max-width: 768px) {
+			.image-row img {
+				width: 30%;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.image-row img {
+				width: 45%;
+			}
+		}
+	</style>
 </head>
 
 <body
@@ -548,6 +797,12 @@
 					</li>
 					<li id="menu-item-817" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
 							href="/contact/" class="nav-link nav-color nav-link-custom menu-contact">Contact</a></li>
+					<li
+						class="nav-item  menu-item menu-item-type-post_type menu-item-object-page nav-link nav-color nav-link-custom menu-contact">
+						<button id="language-toggle"
+							class="language-toggle nav-link nav-color nav-link-custom menu-contact"
+							onclick="toggleLanguage()">ES</button>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -650,7 +905,8 @@
 																		<h1 class="fl-slider-title2-class">Mexico:
 																			Puerto Vallarta, Punta Mita & Sayulita.
 																		</h1>
-																		<p>"La felicidad se hace más grande cuando se
+																		<p data-translate="happiness_quote">"La
+																			felicidad se hace más grande cuando se
 																			comparte"</p>
 																		<p class="custom-font custom-size1">Gretel
 																			Aguilera</p>
@@ -706,10 +962,16 @@
 												data-id="49a840f" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6 class="section-subtitle white text-left">Hacemos</h6>
-													<h4 class="section-title white text-left">Desde una elegante <span
-															class="text-color-red custom-font custom-size6 custom-margin1">
-															boda</span> hasta una íntima ceremonia!</h4>
+													<h6 data-translate="we_do" class="section-subtitle white text-left">
+														Hacemos</h6>
+													<h4 class="section-title white text-left custom-display-inline"
+														data-translate="elegant">
+														Desde una elegante </h4>
+													<h4 class="white-color-review custom-font custom-size6 custom-margin05 custom-display-inline"
+														data-translate="wedding">
+														boda</h4>
+													<h4 class="section-title white text-left custom-display-inline"
+														data-translate="ceremonia">hasta una íntima ceremonia!</h4>
 												</div>
 											</div>
 										</div>
@@ -727,13 +989,15 @@
 												<div class="elementor-widget-container">
 													<div class="section-text white text-left">
 														<p>Puerto Vallarta</p>
-														<p>Ubicado en el océano Pacífico, reconocido por sus
+														<p data-translate="PV">Ubicado en el océano Pacífico, reconocido
+															por sus
 															impresionantes puestas de sol. Este pueblito encantador, con
 															sus techos de teja roja y calles empedradas, ofrece un
 															escenario perfecto y una atmósfera maravillosa para
 															cualquier romántica experiencia.</p>
 														<p>Riviera Nayarit</p>
-														<p>Ubicados al sur del aeropuerto internacional de Puerto
+														<p data-translate="RN">Ubicados al sur del aeropuerto
+															internacional de Puerto
 															Vallarta, San Pancho, Sayulita, Punta Mita y la Cruz de
 															Huanacaxtle, son algunos de los pueblitos de la Riviera
 															Nayarit que albergan exóticas, románticas y sofisticadas
@@ -769,10 +1033,13 @@
 												data-id="d03725a" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6 class="section-subtitle black text-left">Explora</h6>
-													<h4 class="section-title black text-left">Otros <span
-															class="text-color-red custom-font custom-size6">
-															Servicios</span></h4>
+													<h6 class="section-subtitle black text-left"
+														data-translate="explore">Explora</h6>
+													<h4 class="section-title black text-left custom-display-inline"
+														data-translate="our">Otros</h4>
+													<span class="text-color-red custom-font custom-size6"
+														data-translate="services">
+														Servicios</span>
 												</div>
 											</div>
 										</div>
@@ -785,7 +1052,8 @@
 												data-widget_type="florya-text.default">
 												<div class="elementor-widget-container">
 													<div class="section-text black text-left">
-														<p>Contratar un organizador de bodas puede parecer una gran
+														<p data-translate="hiring">Contratar un organizador de bodas
+															puede parecer una gran
 															inversión, pero te ahorra estrés y evita malas decisiones.
 															Aunque al principio te emocione elegir el vestido o degustar
 															pasteles, los detalles esenciales pueden ser abrumadores.
@@ -819,9 +1087,12 @@
 																</div>
 																<div class="con custom-margin-bottom-1">
 																	<a href="consultoriapersonalizada.html">
-																		<h5>Consultoría <span
-																				class="text-color-red custom-font custom-size4">
-																				Personalizada</span></h5>
+																		<h5 class="custom-display-inline"
+																			data-translate="personalized">Consultoría
+																		</h5>
+																		<span data-translate="consultation"
+																			class="white-color-review custom-font custom-size4">
+																			Personalizada</span>
 																		<div class="line"></div>
 																	</a>
 
@@ -900,13 +1171,15 @@
 										class="star-rating"></i></span>
 								<h5 class="white-color-review">Dear Gretel,
 								</h5>
-								<h5 class="fl-testimonial-title2-class white-color-review">''Thank you, so kindly for the beautiful reception you made to celebrate Jewels baptism, you are a great coordinator and I look forward to working with you together again in the future, 
+								<h5 class="fl-testimonial-title2-class white-color-review">''Thank you, so kindly for
+									the beautiful reception you made to celebrate Jewels baptism, you are a great
+									coordinator and I look forward to working with you together again in the future,
 									''
 								</h5>
 								<div class="info">
 									<div class="cont">
 										<h6 class="fl-testimonial-title1-class white-color-review">
-											Irene Perry  </h6>
+											Irene Perry </h6>
 									</div>
 								</div>
 							</div>
@@ -914,7 +1187,7 @@
 								<span><i class="star-rating"></i><i class="star-rating"></i><i
 										class="star-rating"></i><i class="star-rating"></i><i
 										class="star-rating"></i></span>
-								<h5 class="white-color-review">Gretel, 
+								<h5 class="white-color-review">Gretel,
 								</h5>
 								<h5 class="fl-testimonial-title2-class white-color-review">''Thanks so much for helping
 									to make our wedding the perfect day! We thought everything went wonderfully and we
@@ -950,12 +1223,14 @@
 												data-id="518a8a1" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6 class="section-subtitle black text-left">MI HISTORIA</h6>
+													<h6 class="section-subtitle black text-left"
+														data-translate="mystory">MI HISTORIA</h6>
 													<h4 class="section-title black text-left">Gretel <span
 															class="text-color-red custom-font custom-size6">
 															Aguilera</span></h4>
 													<div class="section-text black">
-														<p>Soy Gretel Aguilera, wedding planner certificada por la ABC y
+														<p data-translate="story1">Soy Gretel Aguilera, wedding planner
+															certificada por la ABC y
 															miembro de la Asociación de Coordinadores de Bodas de Puerto
 															Vallarta y Riviera Nayarit (AIR), cuento con 24 años de
 															experiencia creando bodas inolvidables en Puerto Vallarta,
@@ -963,13 +1238,15 @@
 															Banderas.
 
 														</p>
-														<p>Mi pasión por la organización y el diseño de bodas se combina
+														<p data-translate="story2">Mi pasión por la organización y el
+															diseño de bodas se combina
 															con un compromiso genuino de hacer realidad la visión de
 															cada pareja que me confía su tan importante proyecto. A
 															través de un enfoque personalizado, cuido cada detalle para
 															que refleje su personalizad y su estilo.</p>
 
-														<p>Estoy aquí para acompañarte en cada paso del proceso y
+														<p data-translate="story3">Estoy aquí para acompañarte en cada
+															paso del proceso y
 															convertir tu día especial en una experiencia verdaderamente
 															mágica. ¡Hagamos realidad tus sueños!
 
@@ -988,7 +1265,8 @@
 																<div class="about-list-icon custom-icon"> <i
 																		aria-hidden="true" class="ti-check"></i></div>
 																<div class="about-list-text">
-																	<p>Coordinadora certificada por Beverly Clark y ABC
+																	<p data-translate="Certified">Coordinadora
+																		certificada por Beverly Clark y ABC
 																		Latam </p>
 																</div>
 															</li>
@@ -996,7 +1274,8 @@
 																<div class="about-list-icon custom-icon"> <i
 																		aria-hidden="true" class="ti-check"></i></div>
 																<div class="about-list-text">
-																	<p>Miembro de AIR, Asociación de Coordinadores de
+																	<p data-translate="member">Miembro de AIR,
+																		Asociación de Coordinadores de
 																		bodas de PVR y NYR
 																	</p>
 																</div>
@@ -1005,7 +1284,8 @@
 																<div class="about-list-icon custom-icon"> <i
 																		aria-hidden="true" class="ti-check"></i></div>
 																<div class="about-list-text">
-																	<p>Mas de 23 años de experiencia
+																	<p data-translate="experience">Más de 23 años de
+																		experiencia
 																	</p>
 																</div>
 															</li>
@@ -1013,7 +1293,8 @@
 																<div class="about-list-icon custom-icon"> <i
 																		aria-hidden="true" class="ti-check"></i></div>
 																<div class="about-list-text">
-																	<p>Más de 350 bodas realizadas
+																	<p data-translate="weddings_made">Más de 350 bodas
+																		realizadas
 
 																	</p>
 																</div>
@@ -1222,9 +1503,12 @@
 												data-id="a72fa64" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6 class="section-subtitle black text-left">bodas</h6>
-													<h4 class="section-title black text-left">Nuestro <span
-															class="custom-size6 custom-font">Portafolio</span></h4>
+													<h6 class="section-subtitle black text-left"
+														data-translate="weddings">bodas</h6>
+													<h4 class="section-title black text-left custom-display-inline"
+														data-translate="our_">
+														Nuestro </h4><span class="custom-size6 custom-font"
+														data-translate="Portfolio">Portafolio</span>
 												</div>
 											</div>
 										</div>
@@ -1314,9 +1598,12 @@
 												data-id="a72fa64" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6 class="section-subtitle black text-left">conoce a</h6>
-													<h4 class="section-title black text-left">Nuestro <span
-															class="custom-size6 custom-font">Equipo</span></h4>
+													<h6 class="section-subtitle black text-left" data-translate="meet">
+														conoce a</h6>
+													<h4 class="section-title black text-left custom-display-inline"
+														data-translate="our_">Nuestro </h4><span
+														class="custom-size6 custom-font"
+														data-translate="team">Equipo</span>
 												</div>
 											</div>
 										</div>
@@ -1348,11 +1635,17 @@
 																		<div class="box-title">
 																			<h5 class="white-color">CHARLY AGUILERA
 																			</h5>
-																			<h6>Ministro de Ceremonias Espirituales
-																				<br />
-																				Coordinador de bodas <br />
-																				Español e ingles<br />
-																			</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="minister">Ministro de
+																				Ceremonias Espirituales</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="coordinator_wedding">
+																				Coordinador de
+																				bodas</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="esp_eng">Español e
+																				ingles</h6>
+
 																		</div>
 																	</div>
 																</div>
@@ -1365,10 +1658,13 @@
 																		<div class="box-title">
 																			<h5 class="white-color">PERLA GARCÍA
 																			</h5>
-																			<h6>Experta en flores, diseño y decoración
-																				de eventos
-																				<br />
-																				Coordinadora de bodas <br />
+																			<h6 class="white-color custom-description"
+																				data-translate="flowers">
+																				Experta en flores, diseño y decoración
+																				de eventos</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="coord_wed">
+																				Coordinadora de bodas
 																			</h6>
 																		</div>
 																	</div>
@@ -1383,13 +1679,15 @@
 																			<h5 class="white-color">SARA BOJORGES
 
 																			</h5>
-																			<h6>Administración
-
-																				<br />
-																				Coordinación de eventos
-																				<br />
-																				Experiencia Supervisión y Logística
-																				<br />
+																			<h6 class="white-color custom-description"
+																				data-translate="admin">
+																				Administración</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="event_co">
+																				Coordinación de eventos</h6>
+																			<h6 class="white-color custom-description"
+																				data-translate="expe_sup">
+																				Experiencia Supervisión y Logística</h6>
 																			</h6>
 																		</div>
 																	</div>
@@ -1427,11 +1725,17 @@
 												data-id="156df94" data-element_type="widget"
 												data-widget_type="florya-title.default">
 												<div class="elementor-widget-container">
-													<h6
-														class="section-subtitle white text-center custom-margin-bottom-1">
+													<h6 class="section-subtitle white text-center custom-margin-bottom-1"
+														data-translate="inspire">
 														INSPÍRATE CON NUESTRO</h6>
-													<h4 class="section-title white text-center">Último <span
-															class="custom-font custom-size6"> Video</span></h4>
+													<div class="video-container-text">
+														<h4 class="section-title white text-center custom-display-inline"
+															data-translate="last">Último </h4><span
+															class="custom-font custom-size6 white-color-review"
+															data-translate="video">
+															Video</span>
+													</div>
+
 												</div>
 											</div>
 											<div class="elementor-element elementor-element-3a479ea elementor-widget elementor-widget-florya-video"
@@ -1491,26 +1795,49 @@
 																			class="text-color-red">Desde /
 																		</span>$0000000 </div> -->
 																	<div class="section-text white">
-																		<p>❖ Locación para la ceremonia y evento con
-																			vista al mar <br />
-																			❖ Letrero de Bienvenida personalizado<br />
-																			❖ Ministro para ceremonia espiritual<br />
-																			❖ Sillas y audio para ceremonia<br />
-																			❖ Cena-Recepción con 1hora de Coctel de
-																			Bienvenida<br />
-																			❖ Menú de 3 tiempos, con entrada, plato
-																			fuerte y postre<br />
-																			❖ 6 horas de descorche con hielos y
-																			mezcladores incluidos<br />
-																			❖ Mesas, sillas y mantelería para el evento
-																			a seleccionar <br />
-																			❖ 7 horas de música de DJ<br />
-																			❖ Pista de baile de madera e iluminación
-																			robótica<br />
-																			❖ Day-of Wedding Coordination (Coordinación
-																			del evento)<br />
-																			❖ Meseros, cocineros, y personal a cargo del
-																			evento incluido.</p><br />
+																		<p class="white-color custom-description"
+																			data-translate="location_for">❖ Locación
+																			para la ceremonia y evento con vista al mar
+																		</p>
+																		<p class="white-color custom-description"
+																			data-translate="welcome_sign">❖ Letrero de
+																			Bienvenida personalizado</p>
+																		<p class="white-color custom-description"
+																			data-translate="minister_for">❖ Ministro
+																			para ceremonia espiritual</p>
+																		<p class="white-color custom-description"
+																			data-translate="chairs_and">❖ Sillas y audio
+																			para ceremonia</p>
+																		<p class="white-color custom-description"
+																			data-translate="reception_dinner">❖
+																			Cena-Recepción con 1 hora de Coctel de
+																			Bienvenida</p>
+																		<p class="white-color custom-description"
+																			data-translate="three_course">❖ Menú de 3
+																			tiempos, con entrada, plato fuerte y postre
+																		</p>
+																		<p class="white-color custom-description"
+																			data-translate="six_hours">❖ 6 horas de
+																			descorche con hielos y mezcladores incluidos
+																		</p>
+																		<p class="white-color custom-description"
+																			data-translate="tables_chairs">❖ Mesas,
+																			sillas y mantelería para el evento a
+																			seleccionar</p>
+																		<p class="white-color custom-description"
+																			data-translate="seven_hours">❖ 7 horas de
+																			música de DJ</p>
+																		<p class="white-color custom-description"
+																			data-translate="dance_floor">❖ Pista de
+																			baile de madera e iluminación robótica</p>
+																		<p class="white-color custom-description"
+																			data-translate="day_of">❖ Day-of Wedding
+																			Coordination (Coordinación del evento)</p>
+																		<p class="white-color custom-description"
+																			data-translate="waiters_cooks">❖ Meseros,
+																			cocineros, y personal a cargo del evento
+																			incluido.</p>
+
 																		<div class="amount"><span
 																				class="text-color-red">Desde /
 																			</span>$465,000 </div>
@@ -1528,6 +1855,15 @@
 						</div>
 					</div>
 				</div>
+			</section>
+			<!-- GALLERY -->
+			<section class="image-row">
+				<img src="assets/imgs/widget-ig-1.png" alt="Imagen 1" />
+				<img src="assets/imgs/widget-ig-2.png" alt="Imagen 2" />
+				<img src="assets/imgs/widget-ig-3.png" alt="Imagen 3" />
+				<img src="assets/imgs/widget-ig-4.png" alt="Imagen 4" />
+				<img src="assets/imgs/widget-ig-5.png" alt="Imagen 5" />
+				<img src="assets/imgs/widget-ig-6.png" alt="Imagen 6" />
 			</section>
 			<!-- CONTACTO -->
 			<section
@@ -1558,10 +1894,13 @@
 									<div class="sec-title signup">
 										<div class="content">
 											<div class="cont text-left">
-												<h6 class="text-left custom-margin-bottom-1">EMPECÉMOS A PLANEAR LA BODA
+												<h6 class="text-left custom-margin-bottom-1" data-translate="lets">
+													EMPECÉMOS A PLANEAR LA BODA
 													DE TUS SUEÑOS</h6>
-												<h4 class="text-left">Consulta <span class="custom-font custom-size5">
-														Personalizada </span></h4>
+												<h4 class="text-left custom-display-inline"
+													data-translate="personalized">Consulta </h4><span
+													class="custom-font custom-size5" data-translate="consultation">
+													Personalizada </span>
 											</div>
 										</div>
 									</div>
@@ -1593,40 +1932,45 @@
 												<p>
 													<label>
 														<input type="text" name="NAME"
-															placeholder="Nombre de los novios" required>
+															placeholder="Nombre de los novios" required
+															data-translate-placeholder="placeholder_name">
 													</label>
 												</p>
 												<p>
 													<label>
 														<input type="text" name="NAME" placeholder="Número de invitados"
-															required>
+															required data-translate-placeholder="placeholder_guests">
 													</label>
 												</p>
 												<p>
 													<label>
-														<input type="text" name="NAME" placeholder="Correo" required>
+														<input type="text" name="NAME" placeholder="Correo" required
+														data-translate-placeholder="placeholder_email">
 													</label>
 												</p>
 												<p>
 													<label>
 														<input type="email" name="EMAIL" placeholder="Fecha de lo boda"
-															required>
+															required data-translate-placeholdere="placeholder_date">
 													</label>
 												</p>
 												<p>
 													<label>
 														<input type="email" name="EMAIL"
-															placeholder="Número de Contacto" required>
+															placeholder="Número de Contacto" required
+															data-translate-placeholder="placeholder_phone">
 													</label>
 												</p>
 												<p>
 													<label>
-														<input type="email" name="EMAIL" placeholder="Mensaje" required>
+														<input type="email" name="EMAIL" placeholder="Mensaje" required
+														data-translate-placeholder="placeholder_message">
 													</label>
 												</p>
 												<p>
-													<input type="submit" value="ENVIAR">
+													<input type="submit" value="ENVIAR" data-translate-placeholder="submit_button">
 												</p>
+
 											</div><label style="display: none !important;">Leave this field empty if
 												you're human: <input type="text" name="_mc4wp_honeypot" value
 													tabindex="-1" autocomplete="off"></label><input type="hidden"
@@ -1700,10 +2044,8 @@
 			<!-- <img src="assets/imgs/logos-footer.png" alt="" srcset=""> -->
 		</div>
 	</section>
-	<!-- INSTAGRAM WIDGET -->
-	<!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-	<script src="https://static.elfsight.com/platform/platform.js" async></script>
-	<div class="elfsight-app-0b22f6c3-8636-4daf-ba09-c54a60d1a7cb custom-widget" data-elfsight-app-lazy></div>
+
+
 	<a href="https://wa.me/5213221820481" class="whatsapp-float" target="_blank">
 		<i class="fab fa-whatsapp"></i>
 	</a>
@@ -1716,8 +2058,10 @@
 							<div id="text-2" class="widget widget-block footer-widget-block widget_text">
 								<h3 class="footer-title custom-color">Gretel Weddings</h3>
 								<div class="textwidget">
-									<p class="custom-color">Hi, I'm Samantha, a wedding planner, and designer who loves
-										life in the wonderful New York. The nestam acuam nec odio the elementum.</p>
+									<p class="custom-color" data-translate="hello">Hola! Soy Gretel
+										Una Wedding Planner que ama su trabajo
+										y le encanta hacer bodas de ensueño.
+										Contáctanos para trabajar juntos!</p>
 								</div>
 							</div>
 						</div>
@@ -1725,7 +2069,7 @@
 					<div class="col-md-4">
 						<div class="footer-column">
 							<div id="nav_menu-2" class="widget widget-block footer-widget-block widget_nav_menu">
-								<h3 class="custom-color">Explora</h3>
+								<h3 class="custom-color" data-translate="explore">Explora</h3>
 								<div class="menu-footer-menu-container">
 									<ul id="menu-footer-menu" class="menu">
 										<li id="menu-item-883"
@@ -1767,7 +2111,7 @@
 						<div class="footer-column">
 							<div id="florya_contact_widget-2"
 								class="widget widget-block footer-widget-block widget_florya_contact_widget">
-								<h3 class="footer-title custom-color">Contáctanos</h3>
+								<h3 class="footer-title custom-color" data-translate="contact_us">Contáctanos</h3>
 								<div class="footer-contact">
 									<p class="footer-contact-text custom-color">Puerto Vallarta, Jalisco </p>
 									<div class="footer-contact-info">
@@ -1844,6 +2188,31 @@
 	<script
 		id="elementor-frontend-js-before">/*<![CDATA[*/var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "hasCustomBreakpoints": false }, "version": "3.25.11", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_optimized_control_loading": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/webredox.net\/demo\/wp\/florya\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/webredox.net\/demo\/wp\/florya\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/webredox.net\/demo\/wp\/florya\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "30eb9e7b86" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 10, "title": "Florya%20%E2%80%93%20Wedding%20and%20Event%20Planner%20WordPress%20Theme", "excerpt": "", "featuredImage": false } };/*]]>*/</script>
 	<script src="js/3c74e.js"></script>
+	<script>
+		// Función para alternar idioma
+		function toggleLanguage() {
+			const currentLang = document.documentElement.lang;
+			const newLang = currentLang === 'es' ? 'en' : 'es';
+			changeLanguage(newLang);
+		}
+
+		// Sincronizar botones de idioma
+		function syncLanguageButtons() {
+			const lang = document.documentElement.lang;
+			const buttons = document.querySelectorAll('.language-toggle');
+			buttons.forEach(btn => {
+				btn.textContent = lang === 'es' ? 'EN' : 'ES';
+			});
+		}
+
+		// Modificar la función changeLanguage para incluir la sincronización
+		function changeLanguage(lang) {
+			document.documentElement.lang = lang;
+			localStorage.setItem('preferredLanguage', lang);
+			updateTexts(lang);
+			syncLanguageButtons();
+		}
+	</script>
 </body>
 
 </html>

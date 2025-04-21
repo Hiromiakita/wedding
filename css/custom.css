@@ -131,3 +131,15 @@ background: none !important;
 .white-color-review {
     color: white !important;
 }
+.custom-display-inline {
+    display: inline !important;
+}
+
+.custom-description {
+    margin: 0 !important;
+}
+
+.video-container-text {
+    text-align: center;
+    margin: 2rem;
+}
