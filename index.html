@@ -476,41 +476,6 @@
 		}
 	</style>
 	<style>
-		.language-toggle {
-			background: transparent;
-			border: 1px solid #fff;
-			color: #fff;
-			padding: 5px 10px;
-			border-radius: 4px;
-			cursor: pointer;
-			margin-left: 15px;
-			font-size: 14px;
-			transition: all 0.3s ease;
-			font-size: 1rem;
-			border: 1px solid#EBA696 !important;
-
-		}
-
-		.language-toggle:hover {
-			background: rgba(255, 255, 255, 0.1);
-		}
-
-		.language-toggle:focus {
-			outline: #EBA696 !important;
-		}
-
-		.navbar-nav {
-			display: flex;
-			align-items: center;
-		}
-
-		/* Ajustes para el menú móvil */
-		.florya-mob-menu-wrapper .language-toggle {
-			margin: 10px 0;
-			display: inline-block;
-		}
-	</style>
-	<style>
 		.image-row {
 			display: flex;
 			flex-wrap: wrap;
@@ -567,6 +532,47 @@
 				/* o 100% si quieres que ocupen todo el ancho */
 				/* margin-bottom: 20px; */
 			}
+		}
+	</style>
+	<style>
+		.language-toggle {
+			background: transparent;
+			border: 1px solid #fff;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			margin-left: 15px;
+			font-size: 14px;
+			transition: all 0.3s ease;
+			font-size: 1rem;
+			border: 1px solid#EBA696 !important;
+
+		}
+
+		.language-toggle:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.language-toggle:focus {
+			outline: #EBA696 !important;
+		}
+
+		.navbar-nav {
+			display: flex;
+			align-items: center;
+		}
+
+		/* Ajustes para el menú móvil */
+		.florya-mob-menu-wrapper .language-toggle {
+			margin: 10px 0;
+			display: inline-block;
+		}
+
+		.button-translation-container {
+			display: flex;
+			align-items: center;
+			gap: 10px;
 		}
 	</style>
 </head>
@@ -632,6 +638,7 @@
 			</div>
 		</div>
 	</nav>
+	<!-- Navbar Mobile -->
 	<div class="florya-mob-menu-wrapper florya-mob-menu-ss ptr-classic-mob-off weeding-navbar">
 		<div class="logo-holder">
 
@@ -640,6 +647,10 @@
 			</a>
 		</div>
 		<div class="button-translation-container">
+            <ul class="bn-classic-menu-class navbar-nav ml-auto  bn-if-permalink-off" >
+                <li id="menu-item-824" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
+                        href="index.html" class="nav-link nav-color nav-link-custom menu-services">Home</a></li>
+            </ul>
 			<button id="language-toggle" class="language-toggle nav-link nav-color nav-link-custom menu-contact"
 				onclick="toggleLanguage()">ES</button>
 		</div>
