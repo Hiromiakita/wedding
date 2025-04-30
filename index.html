@@ -538,6 +538,37 @@
 			}
 		}
 	</style>
+	<style>
+		/* Ajuste por defecto (pantallas grandes) */
+		.review-container {
+			display: flex;
+			justify-content: space-between;
+			gap: 5px;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			/* opcional si deseas que salten a otra fila si no caben */
+		}
+
+		.review-item {
+			flex: 1;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		/* Estilos responsivos */
+		@media (max-width: 900px) {
+			.review-container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.review-container .review-item {
+				width: 90%;
+				/* o 100% si quieres que ocupen todo el ancho */
+				/* margin-bottom: 20px; */
+			}
+		}
+	</style>
 </head>
 
 <body
@@ -573,7 +604,7 @@
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="bn-classic-menu-class navbar-nav ml-auto  bn-if-permalink-off">
 					<li id="menu-item-824" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
-							href="index.html" class="nav-link nav-color nav-link-custom menu-services">Home</a></li>
+							href="/" class="nav-link nav-color nav-link-custom menu-services">Home</a></li>
 
 					<li id="menu-item-812" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
 							href="#about-section" class="nav-link nav-color nav-link-custom menu-about">About</a></li>
@@ -586,9 +617,11 @@
 							class="nav-link nav-color nav-link-custom menu-services">Portfolio</a>
 					</li>
 					<li id="menu-item-818" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
-							href="#gallery-section" class="nav-link nav-color nav-link-custom menu-gallery">Gallery</a></li>
+							href="#gallery-section" class="nav-link nav-color nav-link-custom menu-gallery">Gallery</a>
+					</li>
 					<li id="menu-item-817" class="nav-item menu-item menu-item-type-post_type menu-item-object-page"><a
-							href="#contact-section" class="nav-link nav-color nav-link-custom menu-contact">Contact</a></li>
+							href="#contact-section" class="nav-link nav-color nav-link-custom menu-contact">Contact</a>
+					</li>
 					<li
 						class="nav-item  menu-item menu-item-type-post_type menu-item-object-page nav-link nav-color nav-link-custom menu-contact">
 						<button id="language-toggle"
@@ -920,7 +953,7 @@
 				<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column  elementor-top-column elementor-element elementor-element-3f2f44d"
 						data-id="3f2f44d" data-element_type="column">
-						<div style="display: flex;">
+						<div class="review-container">
 							<div class="item review-item">
 								<span><i class="star-rating"></i><i class="star-rating"></i><i
 										class="star-rating"></i><i class="star-rating"></i><i
@@ -1631,7 +1664,7 @@
 				</div>
 			</section>
 			<!-- GALLERY -->
-			<section id="gallery-section"class="image-row">
+			<section id="gallery-section" class="image-row">
 				<img src="assets/imgs/widget-ig-1.png" alt="Imagen 1" />
 				<img src="assets/imgs/widget-ig-2.png" alt="Imagen 2" />
 				<img src="assets/imgs/widget-ig-3.png" alt="Imagen 3" />
@@ -1849,28 +1882,23 @@
 									<ul id="menu-footer-menu" class="menu">
 										<li id="menu-item-883"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-883 custom-color">
-											<a class="custom-color"
-												href="https://webredox.net/demo/wp/florya/about/">About</a>
+											<a class="custom-color" href="#about-section">About</a>
 										</li>
 										<li id="menu-item-886"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-886 custom-color">
-											<a class="custom-color"
-												href="https://webredox.net/demo/wp/florya/services/">Services</a>
+											<a class="custom-color" href="#services-section">Services</a>
 										</li>
 										<li id="menu-item-885"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-885">
-											<a class="custom-color"
-												href="https://webredox.net/demo/wp/florya/portfolio-grid/">Portfolio</a>
+											<a class="custom-color" href="#portfolio-section">Portfolio</a>
 										</li>
 										<li id="menu-item-884"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-884">
-											<a class="custom-color"
-												href="https://webredox.net/demo/wp/florya/gallery/">Gallery</a>
+											<a class="custom-color" href="#gallery-section">Gallery</a>
 										</li>
 										<li id="menu-item-888"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888">
-											<a class="custom-color"
-												href="https://webredox.net/demo/wp/florya/contact/">Contact</a>
+											<a class="custom-color" href="#contact-section">Contact</a>
 										</li>
 									</ul>
 								</div>
