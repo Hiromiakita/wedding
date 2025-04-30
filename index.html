@@ -575,6 +575,32 @@
 			gap: 10px;
 		}
 	</style>
+	<style>
+		/* Elimina cualquier animación de flip */
+		.square-flip,
+		.square-flip:hover,
+		.square-flip:focus,
+		.square-flip:active {
+		  transform: none !important;
+		  perspective: none !important;
+		}
+	  
+		.square {
+		  transform: none !important;
+		  transition: none !important;
+		}
+	  
+		.square-container {
+		  transform: none !important;
+		  transition: none !important;
+		}
+	  
+		/* Opcional: elimina pointer-events si quieres que no hagan nada en absoluto */
+		.square-flip {
+		  pointer-events: auto;
+		}
+	  </style>
+	  
 </head>
 
 <body
