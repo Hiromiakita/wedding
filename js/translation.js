@@ -159,7 +159,7 @@ function updateTexts(lang) {
         'placeholder_date': { 'en': 'Wedding date', 'es': 'Fecha de la boda' },
         'placeholder_phone': { 'en': 'Phone number', 'es': 'Teléfono de contacto' },
         'placeholder_message': { 'en': 'Message', 'es': 'Mensaje' },
-        'submit_button': {'en': 'Send', 'es': 'Enviar'},
+        'submit_button': { 'en': 'Send', 'es': 'Enviar' },
 
 
 
@@ -176,11 +176,18 @@ function updateTexts(lang) {
     });
     // Traduce placeholders
     document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
-const key = element.getAttribute('data-translate-placeholder');
-if (translations[key] && translations[key][lang]) {
-    element.setAttribute('placeholder', translations[key][lang]);
-}
-});
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[key] && translations[key][lang]) {
+            element.setAttribute('placeholder', translations[key][lang]);
+        }
+    });
+    // Traduce values
+    document.querySelectorAll('[data-value-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-value-placeholder');
+        if (translations[key] && translations[key][lang]) {
+            element.setAttribute('value', translations[key][lang]);
+        }
+    });
 }
 
 // Cargar el idioma preferido al cargar la página
