@@ -156,3 +156,7 @@ background: none !important;
 .custom-line-height {
   line-height:0 !important
 }
+
+.custom-section {
+    padding-top: 20px !important;
+}
